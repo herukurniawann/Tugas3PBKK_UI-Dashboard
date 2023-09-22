@@ -1,0 +1,292 @@
+﻿<Window x:Class="WPFDashboard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFDashboard"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" Height="600" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1" Background="#FFCFCFCF">
+            <ScrollViewer Background="{DynamicResource MaterialDesignToolBackground}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" HorizontalAlignment="Left" Margin="10,0,0,70">
+                                <Grid.Background>
+                                    <SolidColorBrush Color="#FFEAC30B"/>
+                                </Grid.Background>
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="PeopleGroup" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="Active Users" HorizontalAlignment="Right" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Top" Foreground="Gray" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock Text="12,00" FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Column="1">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" HorizontalAlignment="Left" Margin="10,0,0,70" Background="#FF638E41">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="Dollar" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="Revenue" HorizontalAlignment="Right" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Top" Foreground="Gray" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock Text="$300k" FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Column="2">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" Background="#FFB925F3" HorizontalAlignment="Left" Margin="10,0,0,70">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="MagnetOn" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="User Engagement" HorizontalAlignment="Right" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Top" Foreground="Gray" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock Text="100k" FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="0">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" Background="#FF1CD1DE" HorizontalAlignment="Left" Margin="10,0,0,70">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="Eye" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="Product Views" HorizontalAlignment="Right" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Top" Foreground="Gray" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock Text="1k" FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="1">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" Background="#FF1C2FCA" HorizontalAlignment="Left" Margin="10,0,0,70">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="Star" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="App Rating" HorizontalAlignment="Right" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Top" Foreground="Gray" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock Text="6.2" FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Grid.Column="2">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" Background="#FFF93EA5" HorizontalAlignment="Left" Margin="10,0,0,70">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="UserConvert" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="Conversion Rate" HorizontalAlignment="Right" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Top" Foreground="Gray" FontSize="16"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock Text="11%" FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Grid.Column="0">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" Background="#FF006D77" HorizontalAlignment="Left" Margin="10,0,0,70">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="Mail" HorizontalAlignment="Center" Margin="0,25,0,0" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="Mail" HorizontalAlignment="Center" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Center" Foreground="Gray" FontSize="26"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Grid.Column="1">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" Background="#FFF27059" HorizontalAlignment="Left" Margin="10,0,0,70">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="Settings" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="Settings" HorizontalAlignment="Center" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Center" Foreground="Gray" FontSize="26"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+                    <Grid Grid.Row="2" Grid.Column="3">
+                        <Rectangle Height="100" Margin="20" Fill="{DynamicResource MaterialDesignCardBackground}" RadiusY="10" RadiusX="10" >
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="20" Color="#FFDEDEDE" RenderingBias="Quality" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <Grid Margin="25" Height="120">
+                            <Grid Width="35" Background="#FF9381FF" HorizontalAlignment="Left" Margin="10,0,0,70">
+                                <Grid.Effect>
+                                    <DropShadowEffect BlurRadius="20" Color="#FFECECEC" RenderingBias="Quality" ShadowDepth="1"/>
+                                </Grid.Effect>
+                                <materialDesign:PackIcon Kind="Language" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="5" Foreground="White" Width="20" Height="20"/>
+                            </Grid>
+                            <TextBlock Text="Language" HorizontalAlignment="Center" FontFamily="Segoe UI" Margin="5" VerticalAlignment="Center" Foreground="Gray" FontSize="26"/>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10 20">
+                                <TextBlock FontFamily="Segoe UI Black" Foreground="Gray" FontSize="48" RenderTransformOrigin="0.447,0.459"/>
+                            </StackPanel>
+
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </ScrollViewer>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Background="{DynamicResource MaterialDesignToolBackground}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="White" ShadowDepth="1" RenderingBias="Quality"/>
+            </Grid.Effect>
+
+            <StackPanel>
+                <Button Margin="10" Background="#FFFF9100" Style="{StaticResource MaterialDesignRaisedButton}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click" >
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="MonitorDashboard" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="DASHBOARD" FontFamily="Segoe UI Semibold"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FFFF9100" Style="{StaticResource MaterialDesignRaisedButton}" BorderBrush="{x:Null}" Foreground="White" >
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="user" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="USER" FontFamily="Segoe UI Semibold"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FFFF9100" Style="{StaticResource MaterialDesignRaisedButton}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click_1" >
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Cart" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="PRODUCTS" FontFamily="Segoe UI Semibold"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FFFF9100" Style="{StaticResource MaterialDesignRaisedButton}" BorderBrush="{x:Null}" Foreground="White" >
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Exchange" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="TRANSACTIONS" FontFamily="Segoe UI Semibold"/>
+                    </Grid>
+                </Button>
+                <Button Margin="10" Background="#FFFF9100" Style="{StaticResource MaterialDesignRaisedButton}" BorderBrush="{x:Null}" Foreground="White" Click="Button_Click_2" >
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="Settings" VerticalAlignment="Center"/>
+                        <TextBlock HorizontalAlignment="Center" Text="SETTINGS" FontFamily="Segoe UI Semibold"/>
+                    </Grid>
+                </Button>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="GridTitleBar" Grid.ColumnSpan="2" Background="#FFFF9100" MouseDown="GridTitleBar_MouseDown">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Background="{x:Null}">
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                    <materialDesign:PackIcon Kind="Notifications" VerticalAlignment="Center"></materialDesign:PackIcon>
+                </Button>
+                <Button Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White">
+                    <materialDesign:PackIcon Kind="Account" VerticalAlignment="Center"></materialDesign:PackIcon>
+                </Button>
+                <Button x:Name="ButtonPower" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" Width="25" Height="25" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonPower_Click">
+                    <materialDesign:PackIcon Kind="Power" VerticalAlignment="Center"></materialDesign:PackIcon>
+                </Button>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
